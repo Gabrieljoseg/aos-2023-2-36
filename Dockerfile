@@ -2,12 +2,14 @@ FROM node:latest
 
 WORKDIR /express-01
 
+COPY package.json /express-01
+
+RUN npm install
+
 COPY . /express-01
 
 ENV PORT=3000
 
-RUN npm install
-
 EXPOSE 3000
 
-ENTRYPOINT npm run dev
+CMD ["npm", "run", "dev"]
