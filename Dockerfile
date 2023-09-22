@@ -1,8 +1,6 @@
-//==> Dockerfile
-
 FROM node:latest
 
-WORKDIR ./express-01
+WORKDIR /express-01
 
 COPY . .
 
